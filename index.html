@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Password Generator</h1>
+      <div id="main-text">
+        <h3>
+          Welcome to the Password Generator tool!
+          <br />
+          <br />
+          Create strong, secure passwords tailored to your needs.
+        </h3>
+      </div>
+      <div id="option-list">
+        <ul>
+          <li>
+            <p>Generate a random password with default settings.</p>
+            <p
+              id="random-password"
+              class="random-password"
+              title="Click to Copy"
+              onclick="firstTextClicked()"
+            ></p>
+            <button
+              id="random-button"
+              class="random-button"
+              onclick="generateRandomPassword()"
+            >
+              Generate Unique Password
+            </button>
+          </li>
+          <li>
+            <p>
+              Create a password with specific criteria (length, symbols,
+              numbers).
+            </p>
+            <details>
+              <summary><span>Generate Custom Password</span></summary>
+
+              <p
+                id="custom-password"
+                class="custom-password"
+                title="Click to Copy"
+                onclick="secondTextClicked()"
+              ></p>
+
+              <div id="custom-option">
+                <div>
+                  <div id="form-lines">
+                    <label for="length">Password Length:</label>
+                    <input
+                      type="number"
+                      id="length"
+                      min="8"
+                      max="30"
+                      required
+                    />
+                  </div>
+                  <div id="form-lines">
+                    <label for="uppercase">Include Uppercase Letters:</label>
+                    <input type="checkbox" id="uppercase" checked />
+                  </div>
+                  <div id="form-lines">
+                    <label for="lowercase">Include Lowercase Letters:</label>
+                    <input type="checkbox" id="lowercase" checked />
+                  </div>
+                  <div id="form-lines">
+                    <label for="numbers">Include Numbers:</label>
+                    <input type="checkbox" id="numbers" checked />
+                  </div>
+
+                  <div id="form-lines">
+                    <label for="symbols">Include Symbols:</label>
+                    <input type="checkbox" id="symbols" checked />
+                  </div>
+                </div>
+              </div>
+
+              <button
+                id="custom-button"
+                class="custom-button"
+                onclick="generateCustomizedPassword()"
+              >
+                Generate
+              </button>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
