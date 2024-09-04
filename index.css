@@ -10,12 +10,14 @@ main {
   margin: 0rem 0.5rem;
 }
 h1 {
+  color: darkslateblue;
   font-size: 3rem;
   text-align: center;
 }
 
 h3 {
   margin: 0rem;
+  color: darkslateblue;
 }
 
 #main-text {
